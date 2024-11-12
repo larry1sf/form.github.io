@@ -21,15 +21,125 @@
                     <span></span>
                 </div>
                 <ul id="menu">
-                    <li><a href="/" aria-label="Pagina Principal" title="ir a la pagina principal">Principal</a></li>
-                    <li><a href="/formulario.html" aria-label="Pagina de Formulario"
+                    <li><a href="index.html" aria-label="Pagina Principal"
+                            title="ir a la pagina principal">Principal</a></li>
+                    <li><a href="formulario.html" aria-label="Pagina de Formulario"
                             title="Puedes ver el ejemplo del formulario">Formulario</a></li>
-                    <li id="m-btn"><a href="/video.html" aria-label="Pagina de Video"
+                    <li id="m-btn"><a href="video.html" aria-label="Pagina de Video"
                             title="Una pagina para ver un video de prueba">Video</a></li>
                 </ul>
             </label>
         </nav>
     </header>
+    <main>
+        <div id="bf">
+
+            <div id="intro-form">
+
+                <div id="repar">
+                    <div class="c-form">
+                        <h2>Entrada corta a los <span>Formularios</span>
+                        </h2>
+                        <p>
+                            Aqui aremos una mini pagina de login con nuestros inputs
+                        </p>
+                    </div>
+                    <form class="c-form" action="" method="get">
+                        <label class="text__label">
+                            Introduce tu nombre
+                            <input class="text__inputs"
+                                aria-label="introduce el nombre del usuario para registralo la pagina"
+                                title="introduce el nombre del usuario para registralo la pagina"
+                                placeholder="Diego Parra" type="text" name="user" id="userName">
+                        </label>
+
+                        <label class="text__label">
+                            Introduce tu Correo electronico
+                            <input class="text__inputs"
+                                aria-label="¡Introduce el correo electronico para futuras promociones y mas!"
+                                title="¡Introduce el correo electronico para futuras promociones y mas!" type="email"
+                                name="user-email" id="userEmail">
+                        </label>
+
+                        <label class="text__label">
+                            Danos a conocer tu genero
+                            <select class="text__inputs" name="user-gender" id="userGender">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Me lo reservo para despues">Me lo reservo para despues</option>
+                                <option value="null">No quiero decirlo</option>
+                            </select>
+                        </label>
+
+                        <label class="text__label">
+                            Selecciona un animal que valla con tigo
+                            <select name="userAnimal" class="text__inputs" id="userAnimal">
+
+                                <option value="gato" id="gato">gato</option>
+
+                                <option value="perro" id="perro">perro</option>
+
+                                <option value="gorila" id="gorila">gorila</option>
+
+                                <option value="delfin" id="delfin">delfin</option>
+
+                            </select>
+
+                        </label>
+
+                        <label class="text__label">
+                            Dinos tu color favorito
+                            <input class="" type="color" name="user-color" id="userColor">
+                        </label>
+                        <input type="submit" value="Continuar">
+                    </form>
+                </div>
+
+
+                <div id="move-page">
+                    <a href="index.html" class="sig__btn" aria-label="boton para moverte a la pagina anterior"
+                        title="boton para moverte a la pagina anterior">
+                        <div class="sig__flecha"></div>
+                        <div class="sig__flecha"></div>
+                    </a>
+                    <a href="video.html" class="sig__btn" aria-label="boton para moverte a la siguiente pagina"
+                        title="boton para moverte a la siguiente pagina">
+                        <div class="sig__flecha"></div>
+                        <div class="sig__flecha"></div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div id="autor">
+            <div id="desc">
+                <div id="icon"></div>
+                <strong>Desarrollador de software</strong>
+                <p>
+                    Me apasiona desarrollar sistemas de software y paginas webs para mejorar en internet llegando cada
+                    ves
+                    mas a mas personas
+                </p>
+            </div>
+            <div id="redes">
+                <strong>¡nuestras redes!</strong>
+                <div id="menu-media">
+                    <a href="https://www.linkedin.com/in/antonio-moncada-264762305/" target="_blank"
+                        class="media__btn"></a>
+                    <a href="" target="_blank" class="media__btn"></a>
+                    <a href="https://wa.link/xwqiq6" target="_blank" class="media__btn"></a>
+                    <a href="https://github.com/larry1sf" target="_blank" class="media__btn"></a>
+                </div>
+
+
+
+            </div>
+            <div id="creacion">♠ <small>Pagina Desarrollada por Larry Ceballos</small> ♠</div>
+        </div>
+    </footer>
 </body>
 
 </html>
