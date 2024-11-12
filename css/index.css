@@ -25,7 +25,6 @@ html {
 }
 
 #nav {
-    width: 100vw;
     height: 8rem;
     display: flex;
     align-items: center;
@@ -65,11 +64,10 @@ html {
             gap: 4%;
             border-radius: var(--br);
 
-            a {
+            li {
                 font-size: 1.25rem;
                 font-weight: 500;
-                text-decoration: none;
-                color: var(--txt);
+
                 padding: var(--p-btn);
                 border-radius: 50rem;
                 border: 2px solid transparent;
@@ -79,10 +77,16 @@ html {
                 &:hover {
                     background: var(--color-primary);
                     border: 2px solid var(--color-primary);
+                    transform: translate(1px, 1px);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--txt);
                 }
             }
 
-            #m-btn a {
+            #m-btn {
                 background: var(--color-primary);
                 border-radius: 50rem;
                 padding: var(--p-btn);
@@ -200,19 +204,13 @@ html {
             min-width: 60vw;
         }
 
-        a,
-        #m-btn a {
-            padding: 1.8px 6px !important;
-        }
+
     }
 
     @media (min-width:0px) and (max-width:800px) {
-        nav #menu__mobile~#menu {
-            justify-content: none;
-        }
 
-        a,
-        #m-btn a {
+        li,
+        #m-btn {
             padding: 1.8px 6px !important;
         }
     }
@@ -224,10 +222,7 @@ html {
 #bg {
     position: relative;
     height: 35rem;
-    background-image: radial-gradient(rgba(177, 137, 159, 0.233), rgba(197, 40, 228, 0.301)), url("../public/imgs/bg.webp");
-    background-image: url("../public/imgs/bg.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: center/cover no-repeat url("../public/imgs/bg.webp"), radial-gradient(rgba(221, 137, 183, 0.237), rgba(109, 66, 117, 0.301));
     border-radius: 2rem;
     padding: 3rem 8rem 4rem 3rem;
     margin: 0 1rem;
@@ -245,11 +240,11 @@ html {
         h2 {
             font-size: 2.3rem;
             font-weight: 400;
-            font-family: 'Lucida Sans Unicode', sans-serif;
+            font-family: 'Lucida Sans Unicode', 'Segoe UI', sans-serif;
             margin: .5rem 0;
 
             span {
-                font-family: sans-serif;
+                font-family: 'Segoe UI';
                 font-weight: 900;
                 background: linear-gradient(to right, #4ce0d7 .2%, #b743d4);
                 background-clip: text;
@@ -277,6 +272,16 @@ html {
                 min-width: 3rem;
                 border-radius: 50rem;
                 position: relative;
+                transition: .2s ease;
+
+                &:hover {
+                    transform: translate(1px, 1px);
+                }
+
+                &:hover>.sig__flecha {
+                    background-color: var(--bg);
+
+                }
 
                 .sig__flecha {
                     position: absolute;
@@ -301,6 +306,10 @@ html {
 
                 &:nth-child(1) {
                     scale: -1;
+
+                    &:hover {
+                        transform: translate(-1px, -1px);
+                    }
                 }
             }
         }
@@ -317,6 +326,137 @@ html {
 
         #intro {
             justify-content: center;
+        }
+    }
+}
+
+
+/* parte del footer */
+
+
+footer {
+    height: 16.5rem;
+
+    #autor {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr 1fr;
+
+        #desc {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            text-align: center;
+
+            #icon {
+                background: center/100% no-repeat url("../public/imgs/man.png");
+                height: 7.5rem;
+                width: 7.5rem;
+                border-radius: 50rem;
+                border: 1px solid #000;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            strong {
+                text-transform: capitalize;
+                align-self: end;
+                font: bold 1.5rem 'Segoe UI';
+            }
+
+            p {
+
+                color: var(--txt);
+                font: 200 'Segoe UI';
+            }
+        }
+
+        #redes {
+            display: flex;
+            flex-direction: column;
+            gap: .9rem;
+            justify-content: center;
+            align-items: center;
+
+            strong {
+                text-transform: capitalize;
+                font: bold 1.5rem "Segoe UI";
+            }
+
+            #menu-media {
+                display: flex;
+                gap: 1rem;
+
+                .media__btn {
+                    display: block;
+
+                    &:nth-child(1) {
+                        height: 3rem;
+                        width: 3rem;
+                        background: center/cover no-repeat url("../public/svg/linkedin.svg");
+                    }
+
+                    &:nth-child(2) {
+                        height: 3rem;
+                        width: 3rem;
+                        background: center/cover no-repeat url("../public/svg/facebook.svg");
+                    }
+
+                    &:nth-child(3) {
+                        height: 3rem;
+                        width: 3rem;
+                        background: center/cover no-repeat url("../public/svg/whatsapp.svg");
+                    }
+
+                    &:nth-child(4) {
+                        height: 3rem;
+                        width: 3rem;
+                        background: center/cover no-repeat url("../public/svg/github.svg");
+                    }
+                }
+            }
+        }
+
+        #creacion {
+            grid-area: 2/1;
+            grid-column: span 2;
+        }
+
+        #creacion {
+            grid-area: 3;
+            grid-column: span 2;
+            text-align: center;
+
+
+            small {
+                font: bolder 1rem monospace;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    @media (min-width:0) and (max-width:610px) {
+        #autor {
+            margin-top: 3rem;
+            gap: 3rem 0;
+        }
+
+        #desc {
+            grid-area: 1;
+            grid-column: span 2;
+        }
+
+        #redes {
+            grid-area: 2;
+            grid-column: span 2;
+        }
+
+        #creacion small {
+            padding-bottom: 1.5rem;
         }
     }
 }
