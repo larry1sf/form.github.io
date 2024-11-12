@@ -222,17 +222,20 @@ html {
 /* parte del main  */
 
 #bg {
+    position: relative;
     height: 35rem;
     background-image: radial-gradient(rgba(177, 137, 159, 0.233), rgba(197, 40, 228, 0.301)), url("../public/imgs/bg.webp");
     background-image: url("../public/imgs/bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 2rem;
-    padding: 5rem;
+    padding: 3rem 5rem;
     margin: 0 1rem;
     box-shadow: 0 0px 2.5px#000;
 
     #intro {
+
+
         height: 100%;
         display: flex;
         justify-content: flex-end;
@@ -258,6 +261,48 @@ html {
         p {
             font-size: 1.5rem;
             font-weight: 200;
+        }
+
+        #move-page {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            gap: .5rem;
+            margin: .8rem;
+
+            .sig__btn {
+                background-color: var(--color-primary);
+                height: 3rem;
+                min-width: 3rem;
+                border-radius: 50rem;
+                position: relative;
+
+                .sig__flecha {
+                    position: absolute;
+                    height: 1.1rem;
+                    width: .2rem;
+                    background-color: #000;
+                    border-radius: 50rem;
+
+                    &:nth-child(1) {
+                        top: .59rem;
+                        left: 1.65rem;
+                        transform: rotate(-50deg);
+                    }
+
+                    &:nth-child(2) {
+                        top: 1.27rem;
+                        left: 1.65rem;
+                        transform: rotate(50deg);
+                    }
+
+                }
+
+                &:nth-child(1) {
+                    scale: -1;
+                }
+            }
         }
     }
 }
