@@ -19,9 +19,9 @@
 <body>
 
     <header id="nav">
-        <div id="logo">
-            <img src="./public/svg/logo.svg" alt="logo">
-        </div>
+        <a href="/" id="logo" title="Prueba de formilarios" aria-label="Prueba de formilarios">
+            <!-- <img src="./public/svg/logo.svg" alt="logo"> -->
+        </a>
         <nav>
             <label for="menu__mobile">
                 <input type="checkbox" name="" id="menu__mobile">
@@ -30,9 +30,11 @@
                     <span></span>
                 </div>
                 <ul id="menu">
-                    <li><a href="/">Principal</a></li>
-                    <li><a href="/formulario.html">Formulario</a></li>
-                    <li id="m-btn"><a href="/video.html">Video</a></li>
+                    <li><a href="/" aria-label="Pagina Principal" title="ir a la pagina principal">Principal</a></li>
+                    <li><a href="/formulario.html" aria-label="Pagina de Formulario"
+                            title="Puedes ver el ejemplo del formulario">Formulario</a></li>
+                    <li id="m-btn"><a href="/video.html" aria-label="Pagina de Video"
+                            title="Una pagina para ver un video de prueba">Video</a></li>
                 </ul>
             </label>
         </nav>
@@ -47,11 +49,13 @@
                     paginas</p>
 
                 <div id="move-page">
-                    <a href="" class="sig__btn">
+                    <a href="" class="sig__btn" aria-label="boton para moverte a la pagina anterior"
+                        title="boton para moverte a la pagina anterior">
                         <div class="sig__flecha"></div>
                         <div class="sig__flecha"></div>
                     </a>
-                    <a href="" class="sig__btn">
+                    <a href="" class="sig__btn" aria-label="boton para moverte a la siguiente pagina"
+                        title="boton para moverte a la siguiente pagina">
                         <div class="sig__flecha"></div>
                         <div class="sig__flecha"></div>
                     </a>

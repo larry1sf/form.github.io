@@ -36,11 +36,11 @@ html {
         height: 3rem;
         min-width: 35%;
         margin-inline-start: 1rem;
+        background-image: url("../public/svg/logo.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 50%;
 
-        img {
-            height: 100%;
-            width: 100%;
-        }
     }
 
     nav {
