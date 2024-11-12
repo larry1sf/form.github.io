@@ -214,6 +214,7 @@ html {
 #bg {
     height: 35rem;
     background-image: radial-gradient(rgba(177, 137, 159, 0.233), rgba(164, 164, 253, 0.301)), url("../public/imgs/bg.webp");
+    background-image: url("../public/imgs/bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 2rem;
