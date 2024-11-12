@@ -206,15 +206,15 @@ html {
         }
     }
 
-    @media (min-width:610px)and (max-width:800px) {}
+
 }
 
 /* parte del main  */
 
 #bg {
     height: 35rem;
-    background-image: radial-gradient(rgba(177, 137, 159, 0.233), rgba(40, 40, 228, 0.301)), url("../public/imgs/bg.webp");
-    /* background-image: url("../public/imgs/bg.webp"); */
+    background-image: radial-gradient(rgba(177, 137, 159, 0.233), rgba(197, 40, 228, 0.301)), url("../public/imgs/bg.webp");
+    background-image: url("../public/imgs/bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 2rem;
@@ -233,13 +233,13 @@ html {
             font-size: 2.3rem;
             font-weight: 400;
             font-family: 'Lucida Sans Unicode', sans-serif;
-            margin: 2rem 0;
+            margin: .5rem 0;
 
             span {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: sans-serif;
                 font-weight: 900;
-
-                background: linear-gradient(to right, #4ce0d7, 70% #b743d4);
+                background: linear-gradient(to right, #4ce0d7 .2%, #b743d4);
+                background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -248,6 +248,14 @@ html {
         p {
             font-size: 1.5rem;
             font-weight: 200;
+        }
+    }
+}
+
+@media (min-width:0px)and (max-width:610px) {
+    #bg {
+        #intro h2 {
+            margin: .05rem 0;
         }
     }
 }
